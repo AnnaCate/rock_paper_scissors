@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <script>
+
+    // Computer play
+    function computerPlay() {
+        let myArray = [
+            'rock', 
+            'paper', 
+            'scissors'
+        ];  
+        let computerSelection = myArray[Math.floor(Math.random() * myArray.length)]; 
+        return computerSelection;
+    };
+
+    // Play one round
+    function playRound(playerSelection, computerSelection) {
+        let score = 0;
+
+        if (playerSelection.toLowerCase() == 'rock' && computerSelection == 'rock') {
+            console.log('This round is a draw');
+        } else if (playerSelection.toLowerCase() == 'rock' && computerSelection == 'paper') {
+            score--
+            console.log('You lose this round');
+        } else if (playerSelection.toLowerCase() == 'rock' && computerSelection == 'scissors') {
+            score++
+            console.log('You win this round');
+        }
+
+        else if (playerSelection.toLowerCase() == 'paper' && computerSelection == 'rock') {
+            score++
+            console.log('You win this round');
+        } else if (playerSelection.toLowerCase() == 'paper' && computerSelection == 'paper') {
+            console.log('This round is a draw');
+        } else if (playerSelection.toLowerCase() == 'paper' && computerSelection == 'scissors') {
+            score--
+            console.log('You lose this round');     
+        }
+
+        else if (playerSelection.toLowerCase() == 'scissors' && computerSelection == 'rock') {
+            score-- 
+            console.log('You lose this round');       
+        } else if (playerSelection.toLowerCase() == 'scissors' && computerSelection == 'paper') {
+            score++
+            console.log('You win this round');
+        } else if (playerSelection.toLowerCase() == 'scissors' && computerSelection == 'scissors') {
+            console.log('This round is a draw');
+        };
+        
+        return score;
+    }
+    
+    // test playing one round
+    // let playerSelection = prompt('Enter one of the following: Rock, Paper, or Scissors','')
+    // const computerSelection = computerPlay()
+    // console.log(playRound(playerSelection, computerSelection))
+
+    // play a game of 5 rounds
+    function game() {
+        let scoreTotal = 0;
+
+        for (let i = 0; i < 5; i++) {
+            scoreTotal += playRound(prompt('Enter one of the following: Rock, Paper, or Scissors',''), computerPlay());
+        }
+
+        let result;
+
+        if (scoreTotal > 0) {
+            result = 'You win!';
+        } else if (scoreTotal < 0) {
+            result = 'You lose'; 
+        } else {
+            result = 'Nobody won!';
+        }
+
+        return result;
+    }
+
+    console.log(game());
+
+    </script>
+</body>
+</html>
