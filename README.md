@@ -1,3 +1,5 @@
-In this project, I will create a web version of Rock, Paper, Scissors using Javascript.
+This webpage allows the user to play Rock Paper Scissors against the computer. The winner is the first to reach 5 points.
 
-From The Odin Project's [curriculum](http://www.theodinproject.com/courses/web-development-101/lessons/html-css)
+View [live webpage](https://annacate.github.io/rock_paper_scissors/)
+
+From The Odin Project's [curriculum](https://github.com/TheOdinProject/curriculum/tree/master/web_development_101/javascript_basics)
