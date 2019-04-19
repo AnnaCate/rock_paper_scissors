@@ -1,8 +1,3 @@
-
-View [live webpage](https://annacate.github.io/rock_paper_scissors/)
-
-From The Odin Project's [curriculum](https://github.com/TheOdinProject/curriculum/tree/master/web_development_101/javascript_basics)
-
 ## Rock Paper Scissors
 An app that allows the user to play Rock Paper Scissors against the computer. View live webpage [here](https://annacate.github.io/rock_paper_scissors/).
 
